@@ -17,6 +17,7 @@ Entries should include a reference to the pull request that introduced the chang
 - [BUGFIX] Disables the Helm test pod when `test.enabled=false`.
 - [BUGFIX] Fix broken `readinessProbe` and `livenessProbe` helper template definitons.
 - [ENHANCEMENT] Add configurable `livenessProbe` and `startupProbe` for the nginx container in the gateway pods.
+- [ENHANCEMENT] Add configurable `livenessProbe` and `startupProbe` for admin-api.
 
 ## 6.23.0
 
