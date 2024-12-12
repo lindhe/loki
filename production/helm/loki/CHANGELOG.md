@@ -15,6 +15,7 @@ Entries should include a reference to the pull request that introduced the chang
 
 - [BUGFIX] Add conditional to include ruler config only if `ruler.enabled=true`
 - [BUGFIX] Disables the Helm test pod when `test.enabled=false`.
+- [BUGFIX] Fix broken `readinessProbe` and `livenessProbe` helper template definitons.
 
 ## 6.23.0
 
