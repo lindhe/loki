@@ -3038,6 +3038,7 @@ ruler:
   #         - alert: HighThroughputLogStreams
   #           expr: sum by(container) (rate({job=~"loki-dev/.*"}[1m])) > 1000
   #           for: 2m
+
 memcached:
   image:
     # -- Memcached Docker image repository
@@ -3060,6 +3061,7 @@ memcached:
     capabilities:
       drop: [ALL]
     allowPrivilegeEscalation: false
+
 memcachedExporter:
   # -- Whether memcached metrics should be exported
   enabled: true
@@ -3086,6 +3088,10 @@ memcachedExporter:
   #   memcached.tls.insecure-skip-verify: false
   #   memcached.tls.server-name: memcached
   extraArgs: {}
+  livenessProbe: {}
+  readinessProbe: {}
+  startupProbe: {}
+
 resultsCache:
   # -- Specifies whether memcached based results-cache should be enabled
   enabled: true
@@ -3184,6 +3190,7 @@ resultsCache:
     storageClass: null
     # -- Volume mount path
     mountPath: /data
+
 chunksCache:
   # -- Specifies whether memcached based chunks-cache should be enabled
   enabled: true
@@ -3286,6 +3293,7 @@ chunksCache:
     storageClass: null
     # -- Volume mount path
     mountPath: /data
+
 ######################################################################################################################
 #
 # Subchart configurations
